@@ -115,7 +115,7 @@ $(document).ready(function() {
 			});
 		},
 		eventClick: function(event){
-			dialogs.confirm('ルーチンを削除しますか？',function (ok){
+			dialogs.confirm('「'+event.title+'」を削除しますか？',function (ok){
 				if(ok){
 					$('#calendar').fullCalendar('removeEvents', event.id);
 					eraseTimetable(event.id);
