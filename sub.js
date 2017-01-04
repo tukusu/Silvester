@@ -289,19 +289,23 @@ function adjustTask(title, addition){
 }
 
 function finish(){
-	if(measure){
-		stopShowing();
-	}
-	var taskSchedule = getTaskSchedule();
-	for(var i = 0; i < taskSchedule.length; i ++){
-		if(taskSchedule[i].title == subject){
-			taskSchedule.splice(i,1);
-			alert("「"+subject+"」を終了しました");
-			window.localStorage.setItem("taskSchedule",JSON.stringify(taskSchedule));
-			makeTaskList("board");
-			break;
+	dialogs.alert('タスクを終了しますか？',function (ok){
+		if(ok){
+			if(measure){
+				stopShowing();
+			}
+			var taskSchedule = getTaskSchedule();
+			for(var i = 0; i < taskSchedule.length; i ++){
+				if(taskSchedule[i].title == subject){
+					taskSchedule.splice(i,1);
+					alert("「"+subject+"」を終了しました");
+					window.localStorage.setItem("taskSchedule",JSON.stringify(taskSchedule));
+					makeTaskList("board");
+					break;
+				}
+			}
 		}
-	}
+	});
 }
 
 function loadTask(button){

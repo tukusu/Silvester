@@ -37,8 +37,6 @@ function makeTaskList(parent){
 	}
 	code += '</select><br><br><div><br>\
 	<input type="button" value="選択" onClick="selectTask()">\
-	<input type="button" value="終了" onClick="selectTask()">\
-	<input type="button" value="削除" onClick="selectTask()">\
 	</div></CENTER></div>';
 	document.getElementById(parent).innerHTML=code;
 	document.getElementById("board").style.opacity=1;
