@@ -14,4 +14,4 @@ SilvesterはOSX,macOS用タスクスケジュール管理アプリケーショ�
 6. 表示されるダイアログに管理者パスワードを入力し、「ok」を押します(初回起動時のみ)
 
 #タスクの作成
-[addTaskUsage](https://raw.github.com/wiki/tukusu/SilvesterGIF/addTaskUsage.mov)
+[addTaskUsage](https://raw.github.com/wiki/tukusu/SilvesterGIF/addTaskUsage.gif)
