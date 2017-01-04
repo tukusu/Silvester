@@ -1,5 +1,5 @@
 #概要
-SilvesterはOSX用タスクスケジュール管理アプリケーションです。  
+SilvesterはOSX,macOS用タスクスケジュール管理アプリケーションです。  
 スケジュール作成の補助、作業具合の監視を行い、ユーザーの作業効率を高める手助けをします。  
 主な機能  
 ・タスク、スケジュールの作成と管理  
@@ -10,4 +10,8 @@ SilvesterはOSX用タスクスケジュール管理アプリケーションで�
 2. ダウンロードフォルダにSilvester.appが追加されます
 3. 必要であれば、Silvester.appをアプリケーションフォルダに移動します
 4. controlキーを押しながらSilvester.appをクリックし、「開く」を押します
-5. 
+5. 確認のダイアログが表示されるので、「開く」を選択します
+6. 表示されるダイアログに管理者パスワードを入力し、「ok」を押します(初回起動時のみ)
+
+#タスクの作成
+[addTaskUsage](https://raw.github.com/wiki/tukusu/SilvesterGIF/addTaskUsage.mov)
