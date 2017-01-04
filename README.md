@@ -14,4 +14,9 @@ SilvesterはOSX,macOS用タスクスケジュール管理アプリケーショ�
 6. 表示されるダイアログに管理者パスワードを入力し、「ok」を押します(初回起動時のみ)
 
 #タスクの作成
-[addTaskUsage](http://web.sfc.keio.ac.jp/~t13507rs/gp/usage/addTaskUsage.mov)
+1. 「新規タスク」を押します  
+2. タイトル、所要時間(時間単位)、期限を入力します  
+3. スケジュールに十分な時間があれば、作成したタスクがスケジュールに追加されます。  
+4. どうしてもタスクの追加に失敗する場合は、オプションから制限解除を行います  
+  
+[説明動画](http://web.sfc.keio.ac.jp/~t13507rs/gp/usage/addTaskUsage.mov)
