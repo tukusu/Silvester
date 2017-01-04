@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Electron Read Us</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="style.css" media="all">
+<style>
+	.progress {
+		position:relative;
+		background-color:#202020;
+		left:10vw;
+		width:80vw;
+		height:6vh;
+		border-radius:5px;
+	}
+
+	.progressBar{
+		position:relative;
+		background-color:#00afcc;
+		left:0vw;
+		width:0vw;
+		height:6vh;
+		z-index:2;
+		border-top-left-radius:5px;
+		border-bottom-left-radius:5px;
+		border-top-right-radius:0px;
+		border-bottom-right-radius:0px;
+		font-family:HelveticaNeue-Thin;
+		color:white;
+	}
+</style>
+<div id="head"><p id="title">Silvester</p></div>
+<div class="calendar" onClick="openCalendar()"><p class="shadow"></p><img src="Icon/icon.png" id="icon"><p id="text">カレンダー</p></div>
+<div id="timeTable" onClick="timetable()"><p class="shadow"></p><img src="Icon/icon2.png" id="icon"><p id="text2">時間割</p></div>
+<div id="score" onClick="score()"><p class="shadow"></p><img src="Icon/icon3.png" id="icon"><p id="text">アンケート</p></div>
+<div id="makeTask" onClick="extendWindow()"><p class="shadow"></p><img src="Icon/icon4.png" id="icon"><p id="text4">新規タスク</p></div>
+<div id="loadTask" onClick="showTaskList()"><p class="shadow"></p><img src="Icon/icon5.png" id="icon"><p id="text4">タスク読込</p></div>
+<div id="option" onClick="option()"><p class="shadow"></p><img src="Icon/icon6.png" id="icon"><p id="text4">オプション</p></div>
+<div id="board">
+	<input value="開始" onClick="start()">
+	<input type="button" value="停止" onClick="stop()">
+	<input type="button" value="終了" onClick="finish()">
+	<input type="button" value="全削除" onClick="remove()">
+	<div><h2>Subject</h2></div>
+	推定進捗
+	<div id="progress" class="progress"><p id="progressBar" class="progressBar">0%</p></div>
+</div>
+<script type='text/javascript' src='jquery.js'></script>
+<script src="Scheduler/packTask.js"></script>
+<script src="Scheduler/packTimetable.js"></script>
+<script src="rayout.js"></script>
+<script src="message.js"></script>
+<script src="sub.js"></script>
+<script src="Scheduler/test.js"></script>
+<script src="UISettings.js"></script>
+<script src="jQuery/jquery.js"></script>
+<script src="jQuery/jquery.datetimepicker.full.min.js"></script>
+<link rel="stylesheet" href="jQuery/jquery.datetimepicker.css">
+</body>
+</html>

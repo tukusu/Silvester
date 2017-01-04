@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link type="text/css" href="fullcalendar.min.css" rel="stylesheet" />
+<link type="text/css" href="fullcalendar.print.css" rel="stylesheet" media='print' />
+ 
+<input type="button" value="ルーチンを表示" id="changeShowRoutine" onClick="changeShowRoutine()">
+<script src="moment.min.js"></script>
+<script type="text/javascript">window.jQuery = window.$ = require('jquery');</script>
+<script type='text/javascript' src='jquery-ui.min.js'></script>
+<script type='text/javascript' src='fullcalendar.min.js'></script>
+<script src='ja.js'></script>
+<script src="gcal.js"></script>
+<script src="../Scheduler/packTask.js"></script>
+<script src="../Scheduler/packTimetable.js"></script>
+<script src="calender.js"></script>
+ 
+<style type='text/css'>
+body{
+	-webkit-app-region: drag;
+	background-color: rgba(255, 255, 255, 0);
+}
+#calendar {
+	width: 600px;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, .95);
+}
+
+/* 日曜日 */
+.fc-sun {
+    color: red;
+    background-color: #ffd6d6;
+}
+ 
+/* 土曜日 */
+.fc-sat {
+    color: blue;
+    background-color: #c6e2ff;
+} 
+</style>
+</head>
+ 
+<body>
+    <div id='calendar'></div>
+</body>
+</html>

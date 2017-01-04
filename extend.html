@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset='utf-8'>
+</head>
+<style>
+      html { height: 100%; width: 100% }
+      body {
+        -webkit-app-region: drag;
+        -webkit-user-select: none;
+      }
+</style>
+
+<div>
+  タイトル
+  <input type="text" id="subject">
+</div>
+<div>
+  文字数
+  <input type="text" id="difficulty">
+  文字
+</div>
+<div>
+  期限
+  <br>
+  <input type="text" id="deadLine0">
+  年
+  <input type="text" id="deadLine1">
+  月
+  <input type="text" id="deadLine2">
+  日
+  <input type="text" id="deadLine3">
+  時
+</div>
+<div>
+  <input type="button" value="作成" onClick="make()">
+</div>
+</html>

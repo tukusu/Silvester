@@ -1,0 +1,62 @@
+ルーチン、深夜時間を追加してpackTask
+連続作業時間、１日の上限に引っかからない限りにおいて、直近の空き時間に突っ込む
+連続作業時間に引っかかる場合は、連続作業時間以下になるまで、作業時間を半分割していく
+分割した作業時間は、それぞれpackTaskする
+上限に達したら、次の日へ強制移行する
+詰め込みきれない場合は、詰めこめるだけ詰め込んだ上で何かしらアナウンスをする(カレンダー上でも色等で警告できるとなおよし)
+
+-packTaskまでの流れ-
+1. 全予定のJSONデータを取得する
+2. 全予定の日時をUnixTimeに変換する
+3. 全予定のうち、始点から終点の間に存在するものを抽出する
+4. 抽出した予定をもとに、始点から終点までに存在する空き時間を抽出する
+5. 抽出した空き時間に、タスクをよしなに詰め込む
+
+ルーチン、深夜時間はUnixTimeに変換し、3.の後で予定に追加する
+
+-失敗後の処理-
+modeによって処理分岐
+mode = 0　何もせず終了
+mode >= 1　連続作業時間を延長　
+mode = 2　睡眠時間、時間割を排除して再試行
+(mode = 2　では、packTimeTableでさらに分岐)
+
+-packTimeTableでの分岐-
+modeによって処理分岐
+mode = 0　通常
+mode = 1　時間割を無視
+mode = 2　睡眠時間を無視
+mode = 3　時間割と睡眠時間を無視
+
+/*for(var i = 0; i < arr.length; i++){
+		var sp = getUnixTime(arr[i].start);
+		var ep = getUnixTime(arr[i].end);
+		if(ep - sp >= fragment[count]){
+			//return arr[i];
+			count ++;
+			taskSet.push(arr[i]);
+			if(count >= fragment.length){
+				return taskSet;
+			}
+		}
+		else{
+			free.push(arr[i]);
+		}
+	}*/
+
+/*var time = (ep - sp) - mergin * 2;
+			var cut = 0;
+			if(require - time <= 0) {
+				mergin = ((ep - sp) - require) / 2;
+			}
+			if(time > limit){
+				cut = (time - limit) / 2;
+			}
+			var obj = {
+				start: parseUnixTime(sp + mergin + cut),
+				end: parseUnixTime(ep - mergin - cut),
+				color: 'red'
+			}
+			task.task.push(obj);
+			require -= (ep - sp) - mergin * 2 - cut * 2;*/
+			//if(time > limit){

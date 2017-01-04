@@ -1,0 +1,33 @@
+{
+  "name": "Silvester",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "date-utils": "^1.2.21",
+    "dialogs": "^1.1.17",
+    "ipc": "^0.0.1",
+    "jquery": "^3.1.1",
+    "menubar": "^5.1.0",
+    "moment": "^2.17.1",
+    "node-keylogger": "^0.0.1",
+    "node-notifier": "^4.6.1"
+  },
+  "devDependencies": {
+    "electron-sudo": "^4.0.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tukusu/Scheduler.git"
+  },
+  "keywords": [],
+  "author": "Suzuki Ryoma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tukusu/Scheduler/issues"
+  },
+  "homepage": "https://github.com/tukusu/Scheduler#readme"
+}

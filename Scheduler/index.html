@@ -1,0 +1,44 @@
+<!DOCYTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+		<script src="moment.js"></script>
+		<script src="packTask.js"></script>
+		<script src="packTimetable.js"></script>
+		<link type="text/css" href="../Calendar/fullcalendar.min.css" rel="stylesheet" />
+		<link type="text/css" href="../Calendar/fullcalendar.print.css" rel="stylesheet" media='print' />
+		<script type="text/javascript">window.jQuery = window.$ = require('jquery');</script>
+		<script type='text/javascript' src='../Calendar/jquery-ui.min.js'></script>
+		<script type='text/javascript' src='../Calendar/fullcalendar.min.js'></script>
+		<script src='../Calendar/ja.js'></script>
+		<script src="../Calendar/gcal.js"></script>
+		<script src="test.js"></script>
+
+		<style type='text/css'>
+		body{
+			-webkit-app-region: drag;
+			background-color: rgba(255, 255, 255, 0);
+		}
+		#calendar {
+			width: 600px;
+			margin: 0 auto;
+			background-color: rgba(255, 255, 255, .95);
+		}
+
+		/* 日曜日 */
+		.fc-sun {
+		    color: red;
+		    background-color: #ffd6d6;
+		}
+		 
+		/* 土曜日 */
+		.fc-sat {
+		    color: blue;
+		    background-color: #c6e2ff;
+		} 
+		</style>
+		<div id='calendar'></div>
+		</body>
+</html>
