@@ -26,7 +26,7 @@ SilvesterはOSX,macOS用タスクスケジュール管理アプリケーショ�
   
 ※重複を避けるため、後述のスケジュールとルーチンの設定を先に行うことを推奨します  
   
-[説明動画](http://web.sfc.keio.ac.jp/~t13507rs/gp/usage/newTaskUsage.mov)
+[説明動画](http://web.sfc.keio.ac.jp/~t13507rs/gp/usage/newTaskUsage.html)
 
 #既存のタスクの管理
 <タスクの開始>  
@@ -70,7 +70,7 @@ SilvesterはOSX,macOS用タスクスケジュール管理アプリケーショ�
 3. 「終了」を押します  
 4. 確認のダイアログが表示されるので、「ok」を押します  
   
-[説明動画](http://web.sfc.keio.ac.jp/~t13507rs/gp/usage/loadTaskUsage.mov)
+[説明動画](http://web.sfc.keio.ac.jp/~t13507rs/gp/usage/loadTaskUsage.html)
 
 #スケジュールの作成
 カレンダー上で予定を追加することができます    
@@ -82,7 +82,7 @@ SilvesterはOSX,macOS用タスクスケジュール管理アプリケーショ�
 3. タイトルを入力します  
 4. 予定を削除したい場合は、予定をクリックします  
   
-[説明動画](http://web.sfc.keio.ac.jp/~t13507rs/gp/usage/calendarUsage.mov)
+[説明動画](http://web.sfc.keio.ac.jp/~t13507rs/gp/usage/calendarUsage.html)
 
 #ルーチンの作成
 授業など、特定の曜日の特定の時間に入ると決まっている予定は、ルーチンとして登録することができます  
@@ -97,7 +97,7 @@ SilvesterはOSX,macOS用タスクスケジュール管理アプリケーショ�
 3. タイトルを入力します  
 4. ルーチンを削除したい場合は、ルーチンをクリックします  
 
-[説明動画](http://web.sfc.keio.ac.jp/~t13507rs/gp/usage/routineUsage.mov)
+[説明動画](http://web.sfc.keio.ac.jp/~t13507rs/gp/usage/routineUsage.html)
 
 #オプション
 オプションを設定することで、タスクをスケジュールに追加する際のルールを定義できます  
