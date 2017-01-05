@@ -242,7 +242,7 @@ ipc.on('openPackTask-order', function(event, arg) {
       resizable: false,
       frame: true,
       transparent: false,
-      title: "Variable Calender"
+      title: "Silvester 評価アンケート"
     })
     nw.loadURL('https://docs.google.com/forms/d/e/1FAIpQLSffTkNsl4b9Zx9kygWnk5kGB_M8TKh7UefWm5zQjHBSxhyjMw/viewform');
     mb.showWindow();
