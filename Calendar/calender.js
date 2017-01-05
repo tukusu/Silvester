@@ -181,7 +181,7 @@ function addRoutine(start, end){
 	for(var i = 0; i < len; i ++){
 		next = defTime + i * 1440;
 		for(var j = 0; j < routine[i % 7].length; j ++){
-			var obj ={start: parseUnixTime(next + routine[i%7][j].start), end: parseUnixTime(next + routine[i%7][j].end), color: "green", id: 1000000};
+			var obj ={start: parseUnixTime(next + routine[i%7][j].start), end: parseUnixTime(next + routine[i%7][j].end), color: "#578a3d", id: 1000000};
 			table.push(obj);
 			$('#calendar').fullCalendar('renderEvent', obj, true);
 		}

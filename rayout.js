@@ -59,7 +59,8 @@ function makeOptionRayout(parent){
 	<div id="checkbox"><input id="option0" type="checkbox"><label for="option0">連続作業時間の延長を許可する</label></div>\
 	<div id="checkbox"><input id="option1" type="checkbox"><label for="option1">ルーチンの解除を許可する</label></div>\
 	<div id="checkbox"><input id="option2" type="checkbox"><label for="option2">睡眠時間の解除を許可する</label></div>\
-	<br><CENTER><input type="button" value="適用" onClick="setPackOption()"></CENTER></div>';
+	<div id="checkbox"><input id="option3" type="checkbox"><label for="option3">連戦を許可する</label></div>\
+	<CENTER><input type="button" value="適用" onClick="setPackOption()"></CENTER></div>';
 	var options = JSON.parse(window.localStorage.getItem("options"));
 	document.getElementById(parent).innerHTML=code;
 	document.getElementById("board").style.opacity=1;
@@ -69,4 +70,5 @@ function makeOptionRayout(parent){
 	document.getElementById("option0").checked = options.option0;
 	document.getElementById("option1").checked = options.option1;
 	document.getElementById("option2").checked = options.option2;
+	document.getElementById("option3").checked = options.option3;
 }

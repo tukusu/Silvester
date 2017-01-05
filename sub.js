@@ -169,6 +169,7 @@ function setPackOption(){
 	options.option0 =  document.getElementById("option0").checked;
 	options.option1 =  document.getElementById("option1").checked;
 	options.option2 =  document.getElementById("option2").checked;
+	options.option3 =  document.getElementById("option3").checked;
 	if(isNaN(options.bedTime)) options.bedTime = 23;
 	if(isNaN(options.sleepTime)) options.sleepTime = 8;
 	if(isNaN(options.conLimit)) options.conLimit = 3;
@@ -289,8 +290,8 @@ function adjustTask(title, addition){
 }
 
 function finish(title,mode){
-	//dialogs.alert('タスクを終了しますか？',function (ok){
-		//if(ok){
+	dialogs.confirm('タスクを終了しますか？',function (ok){
+		if(ok){
 			if(measure){
 				stopShowing();
 			}
@@ -306,8 +307,8 @@ function finish(title,mode){
 					break;
 				}
 			}
-		//}
-	//});
+		}
+	});
 }
 
 function loadTask(button){
@@ -475,13 +476,12 @@ function observe(){
 				var sp = getUnixTime(taskSchedule[i].task[j].start) + 540;
 				var ep = getUnixTime(taskSchedule[i].task[j].end) + 540;
 				if(now >= sp && now <= ep){
-					if(measure){
-						stopShowing();
+					if(!measure){
+						subject = taskSchedule[i].title;
+						makeOperationRayout("board",subject);
+						startShowing();
+						var notice = new Notification("Silvester",{body:"「"+subject+"」を自動で開始しました"});
 					}
-					subject = taskSchedule[i].title;
-					makeOperationRayout("board",subject);
-					startShowing();
-					var notice = new Notification("Silvester",{body:"「"+subject+"」を自動で開始しました"});
 				}
 			}
 		}

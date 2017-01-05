@@ -17,7 +17,7 @@ var menubar=require("menubar");
 var mb=menubar({'transparent':true});
 mb.setOption('width',300);
 mb.setOption('height',420);
-mb.setOption('showDockIcon',true);
+mb.setOption('showDockIcon',false);
 var pass="";
 var windows = {calendar: null, timetable: null, ques: null};
 

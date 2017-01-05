@@ -91,19 +91,21 @@ function findEmpty(arr, sp, ep){
 	var ss = "";
 	//document.write(parseUnixTime(sp));
 	for(var i = 0; i < arr.length; i++){
-		if(ss == "task" || arr[i].state == "task"){
-			console.log("skip");
-			if(ss == "task"){
-				console.log(parseUnixTime(arr[i-1].start));
+		if(options.option3 == false){
+			if(ss == "task" || arr[i].state == "task"){
+				console.log("skip");
+				if(ss == "task"){
+					console.log(parseUnixTime(arr[i-1].start));
+				}
+				if(arr[i].state == "task"){
+					console.log(parseUnixTime(arr[i].start));
+				}
+				if(arr[i].end > sp && arr[i].end > sp && arr[i].start < ep){
+					sp = arr[i].end
+					ss = arr[i].state;
+				}		
+				continue;
 			}
-			if(arr[i].state == "task"){
-				console.log(parseUnixTime(arr[i].start));
-			}
-			if(arr[i].end > sp && arr[i].end > sp && arr[i].start < ep){
-				sp = arr[i].end
-				ss = arr[i].state;
-			}		
-			continue;
 		}
 		var obj = {
 			start: parseUnixTime(sp),
@@ -180,7 +182,7 @@ function packFragment(arr, fragment){
 					var obj = {
 						start: parseUnixTime(sp + mergin),
 						end: parseUnixTime(ep - mergin),
-						color: 'red'
+						color: '#dc143c'
 					}
 					count ++;
 					taskSet.push(obj);
@@ -232,7 +234,7 @@ function packTaskTightly(arr, require, mergin, limit){
 				var obj = {
 					start: parseUnixTime(sut + mergin),
 					end: parseUnixTime(eut - mergin - cut),
-					color: 'red'
+					color: '#dc143c'
 				};
 				var len = (eut - mergin - cut) - (sut + mergin);
 				if(len >= border){
