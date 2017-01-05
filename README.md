@@ -120,7 +120,7 @@ SilvesterはOSX,macOS用タスクスケジュール管理アプリケーショ�
 
 #Silvesterの終了
 Silvesterを開いた状態で、メニューバー上で Silvester > quit を選択します  
-もしくは、Silvesterを開いた状態で、「Command + q」を入力します(非推奨)
+もしくは、Silvesterを開いた状態で、「command + Q」を入力します(非推奨)
 
 #アンケート
 卒業論文執筆のため、Silvesterの評価アンケートにご協力ください  
