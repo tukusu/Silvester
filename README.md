@@ -7,7 +7,7 @@ SilvesterはOSX,macOS用タスクスケジュール管理アプリケーショ�
 
 #インストールと起動
 手順  
-1. [最新のSilvester](http://web.sfc.keio.ac.jp/~t13507rs/gp/Silvester.zip)をダウンロードします  
+1. [最新のSilvester](http://web.sfc.keio.ac.jp/~t13507rs/gp/Silvester-darwin-x64.cpgz)をダウンロードします  
 2. ダウンロードフォルダにSilvester.appが追加されます  
 3. 必要であれば、Silvester.appをアプリケーションフォルダに移動します  
 4. controlキーを押しながらSilvester.appをクリックし、「開く」を押します  
