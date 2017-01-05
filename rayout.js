@@ -60,7 +60,7 @@ function makeOptionRayout(parent){
 	<div id="checkbox"><input id="option1" type="checkbox"><label for="option1">ルーチンの解除を許可する</label></div>\
 	<div id="checkbox"><input id="option2" type="checkbox"><label for="option2">睡眠時間の解除を許可する</label></div>\
 	<div id="checkbox"><input id="option3" type="checkbox"><label for="option3">連戦を許可する</label></div>\
-	<CENTER><input type="button" value="適用" onClick="setPackOption()"></CENTER></div>';
+	<CENTER><input type="button" value="適用" onClick="setPackOption()"><input type="button" value="初期化" onClick="resetOption()"></CENTER></div>';
 	var options = JSON.parse(window.localStorage.getItem("options"));
 	document.getElementById(parent).innerHTML=code;
 	document.getElementById("board").style.opacity=1;

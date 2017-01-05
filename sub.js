@@ -32,6 +32,7 @@ var sentinel;
 var currentID = 0;
 var codex;
 
+//window.localStorage.removeItem("options");
 /*ipc.send('getPassword-order',0);
 
 ipc.on('getPassword-reply', function(event,arg) {
@@ -47,6 +48,8 @@ ipc.send("startUpKeylogger-order",pass);
 ipc.on('startUpKeylogger-failed', function(event,arg) {
 	signInPrompt("管理者パスワードを入力してください");
 });
+
+//initOption();
 
 function signInPrompt(msg){
 	dialogs.prompt(msg,function(et){
@@ -161,6 +164,19 @@ function option(){
 	}
 }
 
+function resetOption(){
+	//window.localStorage.removeItem("options");
+	var options = {bedTime:23,sleepTime:8,conLimit:3,option0:false,option1:false,option2:false,option3:false};
+	window.localStorage.setItem("options",JSON.stringify(options));
+	document.getElementById("bedTime").value = options.bedTime;
+	document.getElementById("sleepTime").value = options.sleepTime;
+	document.getElementById("conLimit").value = options.conLimit;
+	document.getElementById("option0").checked = options.option0;
+	document.getElementById("option1").checked = options.option1;
+	document.getElementById("option2").checked = options.option2;
+	document.getElementById("option3").checked = options.option3;
+}
+
 function setPackOption(){
 	var options = {};
 	options.bedTime = Number(document.getElementById("bedTime").value);
@@ -170,9 +186,9 @@ function setPackOption(){
 	options.option1 =  document.getElementById("option1").checked;
 	options.option2 =  document.getElementById("option2").checked;
 	options.option3 =  document.getElementById("option3").checked;
-	if(isNaN(options.bedTime)) options.bedTime = 23;
-	if(isNaN(options.sleepTime)) options.sleepTime = 8;
-	if(isNaN(options.conLimit)) options.conLimit = 3;
+	if(isNaN(options.bedTime) || options.bedTime == undefined || options.bedTime == "") options.bedTime = 23;
+	if(isNaN(options.sleepTime) || options.sleepTime == undefined || options.sleepTime == "") options.sleepTime = 8;
+	if(isNaN(options.conLimit) || options.conLimit == undefined || options.conLimit == "") options.conLimit = 3;
 	window.localStorage.setItem("options",JSON.stringify(options));
 	alert("設定を適用しました");
 	console.log(options);

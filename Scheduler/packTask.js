@@ -6,7 +6,7 @@ const DAY = 1440;
 const MS = 1000;
 const DIF = 540;
 
-var options = JSON.parse(window.localStorage.getItem("options"));
+var options = initOption();//JSON.parse(window.localStorage.getItem("options"));
 var dayLimit = 360;
 var conLimit = options.conLimit * 60;
 var border = 60;
@@ -292,6 +292,21 @@ function exchangeTime(text){
 		}
 	}
 	return new_text;
+}
+
+function initOption(){
+	var options = window.localStorage.getItem("options");
+	if(options != undefined && options!= null){
+		options = JSON.parse(options);
+	}
+	else{
+		options = {bedTime:23,sleepTime:8,conLimit:3,option0:false,option1:false,option2:false,option3:false};
+	}
+	if(isNaN(options.bedTime) || options.bedTime == undefined || options.bedTime == "") options.bedTime = 23;
+	if(isNaN(options.sleepTime) || options.sleepTime == undefined || options.sleepTime == "") options.sleepTime = 8;
+	if(isNaN(options.conLimit) || options.conLimit == undefined || options.conLimit == "") options.conLimit = 3;
+	window.localStorage.setItem("options",JSON.stringify(options));
+	return options;
 }
 
 /*
