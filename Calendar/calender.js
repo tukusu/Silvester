@@ -135,11 +135,12 @@ function draw(){
 					window.localStorage.setItem("localEvent",JSON.stringify(localEvent));
 					id ++;
 					window.localStorage.setItem("id",id);
+					//checkDouble(start,end);
 				}
 			});
 		},
 		eventClick: function(event){
-			dialogs.confirm('予定を削除しますか？',function (ok){
+			dialogs.confirm('「'+event.title+'」を削除しますか？',function (ok){
 				if(ok){
 					if(event.state == "event"){
 						eraseEvent(event.id);
@@ -191,6 +192,33 @@ function addRoutine(start, end){
 	//$('#calendar').fullCalendar('addEvents',localEvent + table);
 	//$('#calendar').fullCalendar( 'rerenderEvents' );
 	//draw();
+}
+
+function checkDouble(start,end){
+	start = getUnixTime(start);
+	end = getUnixTime(end);
+	console.log(taskSchedule);
+	var num = 0;
+	for(var i = 0; i < taskSchedule.length; i ++){
+		for(var j = 0; j < taskSchedule[i].task.length; j ++){
+			var sp = getUnixTime(taskSchedule[i].task[j].start) + 540;
+			var ep = getUnixTime(taskSchedule[i].task[j].end) + 540;
+			if((start >= sp && start <= ep) || (end >= sp && end <= ep) || (start <= sp && end >= ep)){
+				num = i;
+				dialogs.confirm('重複しているタスクを組み直しますか？(非推奨)',function (ok){
+					if(ok){
+						var subject = taskSchedule[num].title;
+						var limit = taskSchedule[num].limit;
+						var require = taskSchedule[num].require;
+						//finish(subject,1);
+						taskSchedule.splice(i,1);
+						window.localStorage.setItem("taskSchedule",JSON.stringify(taskSchedule));
+						pack(subject,limit,require);
+					}
+				});
+			}
+		}
+	}
 }
 
 function checkOverlap(title){

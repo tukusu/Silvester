@@ -48,7 +48,7 @@ function makeOperationRayout(parent,subject){
 	<input type="button" value="開始" onClick="start()">\
 	<input type="button" value="中断" onClick="stop()">\
 	<input type="button" value="延長" onClick="extendTask()">\
-	<input type="button" value="終了" onClick="finish()"></CENTER>';
+	<input type="button" value="終了" onClick="finish(subject,0)"></CENTER>';
 	document.getElementById(parent).innerHTML=code;
 	document.getElementById("board").style.opacity=1;
 }

@@ -288,24 +288,26 @@ function adjustTask(title, addition){
 	}
 }
 
-function finish(){
-	dialogs.alert('タスクを終了しますか？',function (ok){
-		if(ok){
+function finish(title,mode){
+	//dialogs.alert('タスクを終了しますか？',function (ok){
+		//if(ok){
 			if(measure){
 				stopShowing();
 			}
 			var taskSchedule = getTaskSchedule();
 			for(var i = 0; i < taskSchedule.length; i ++){
-				if(taskSchedule[i].title == subject){
+				if(taskSchedule[i].title == title){
 					taskSchedule.splice(i,1);
-					alert("「"+subject+"」を終了しました");
 					window.localStorage.setItem("taskSchedule",JSON.stringify(taskSchedule));
-					makeTaskList("board");
+					if(mode == 0){
+						alert("「"+title+"」を終了しました");
+						makeTaskList("board");
+					}
 					break;
 				}
 			}
-		}
-	});
+		//}
+	//});
 }
 
 function loadTask(button){

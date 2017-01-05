@@ -21,13 +21,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tukusu/Scheduler.git"
+    "url": "git+https://github.com/tukusu/Silvester.git"
   },
   "keywords": [],
   "author": "Suzuki Ryoma",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tukusu/Scheduler/issues"
+    "url": "https://github.com/tukusu/Silvester/issues"
   },
-  "homepage": "https://github.com/tukusu/Scheduler#readme"
+  "homepage": "https://github.com/tukusu/Silvester#readme"
 }
