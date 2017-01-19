@@ -30,19 +30,22 @@ function init(){
 	routine = window.localStorage.getItem("routine");
 	localEvent = window.localStorage.getItem("localEvent");
 	taskSchedule = window.localStorage.getItem("taskSchedule");
-	if(routine == null || routine == ""){
-		routine = []; 
+	if(routine == null || routine == "" || routine ==undefined){
+		routine = [];
+		for(var i=0;i<7;i++){
+			routine.push(new Array());
+		}
 	}
 	else{
 		routine = JSON.parse(routine);
 	}
-	if(localEvent == null || localEvent == ""){
+	if(localEvent == null || localEvent == "" || localEvent == undefined){
 		localEvent = [];
 	}
 	else{
 		localEvent = JSON.parse(localEvent);
 	}
-	if(taskSchedule == null || taskSchedule == ""){
+	if(taskSchedule == null || taskSchedule == "" || taskSchedule == undefined){
 		taskSchedule = [];
 	}
 	else{

@@ -55,6 +55,9 @@ function signInPrompt(msg){
 	dialogs.prompt(msg,function(et){
 		//ipc.send("signIn-order",et);
 		//ipc.send("setPassword-order",et);
+		if(et == "キーロガーを使用しません"){
+			return;
+		}
 		pass = et;
 		window.localStorage.setItem("password",et);
 		ipc.send("startUpKeylogger-order",pass);
